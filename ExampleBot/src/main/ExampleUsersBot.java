@@ -241,7 +241,7 @@ public class ExampleUsersBot extends BaseAPI {
     @Override
     public void onUnitComplete(Unit unit)
     {
-        builderManager.unitComplete(unit);
+        builderManager.unitBuildingComplete(unit);
 
         for (Squad currentSquad : squadManager.getAllSquads()) {
             if (currentSquad.getSquadNeeds().get(unit.getType()) != null) {

@@ -20,7 +20,7 @@ import java.util.ArrayList;
  * onFrame: call onFrame
  * onUnitCreate: call unitBuildingStarted
  * onUnitMorph: call unitBuildingStarted
- * onUnitComplete: call unitComplete
+ * onUnitComplete: call unitBuildingComplete
  * onUnitDestroy: call unitBuildingKilled
  *
  */
@@ -129,7 +129,7 @@ public class BuilderManager {
      * Or will mark the job as complete and remove it from the list.
      * @param completed The completed unit
      */
-    public void unitComplete(Unit completed)
+    public void unitBuildingComplete(Unit completed)
     {
         if(completed.getPlayer().getID() == BaseAPI.baseAPI.self.getID()) {
             if (completed.getType().isWorker()){
